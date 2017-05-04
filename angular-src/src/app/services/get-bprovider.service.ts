@@ -20,7 +20,7 @@ export class GetBproviderService {
     this.loadToken();
     //headers.append('Content-Type','applications/json');
     headers.append('Authorization',this.AuthToken);
-    return this.http.get('http://localhost:8080/bproviders/MyProfile',{headers:headers}).map(res=>res.json());
+    return this.http.get('http://35.163.158.122:8080/bproviders/MyProfile',{headers:headers}).map(res=>res.json());
   }
 
 
@@ -29,7 +29,7 @@ export class GetBproviderService {
     this.loadToken();
     headers.append('Content-Type','application/json');
     headers.append('Authorization',this.AuthToken);
-    return this.http.post('http://localhost:8080/bproviders/PostAnnouncement',announcement,{headers:headers}).map(res=>res.json());
+    return this.http.post('http://35.163.158.122:8080/bproviders/PostAnnouncement',announcement,{headers:headers}).map(res=>res.json());
   }
 
   deleteAnnouncement(index) {
@@ -37,7 +37,7 @@ export class GetBproviderService {
     this.loadToken();
     headers.append('Content-Type','application/json');
     headers.append('Authorization',this.AuthToken);
-    return this.http.get('http://localhost:8080/bproviders/deleteAnnouncement/'+index, {headers:headers}).map(res=>res.json());
+    return this.http.get('http://35.163.158.122:8080/bproviders/deleteAnnouncement/'+index, {headers:headers}).map(res=>res.json());
   }
 
 }

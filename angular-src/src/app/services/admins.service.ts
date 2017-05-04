@@ -19,7 +19,7 @@ export class AdminsService {
   		this.loadToken();
   		headers.append('Content-Type','application/json');
   		headers.append('Authorization',this.AuthToken);
-  		return this.http.get('http://localhost:8080/admins/ban/'+id+'/'+bool,{headers:headers}).map(res=>res.json());
+  		return this.http.get('http://35.163.158.122:8080/admins/ban/'+id+'/'+bool,{headers:headers}).map(res=>res.json());
   }
 
   viewClients(){
@@ -27,7 +27,7 @@ export class AdminsService {
   		this.loadToken();
   		headers.append('Content-Type','application/json');
   		headers.append('Authorization',this.AuthToken);
-  		return this.http.get('http://localhost:8080/admins/viewclients',{headers:headers}).map(res=>res.json());
+  		return this.http.get('http://35.163.158.122:8080/admins/viewclients',{headers:headers}).map(res=>res.json());
   }
 
   getapplications(){
@@ -36,7 +36,7 @@ export class AdminsService {
   headers.append('Content-Type','application/json');
   headers.append('Authorization',this.AuthToken);
 
-  return this.http.get('http://localhost:8080/admins/getapps',{headers:headers}).map(res=>res.json());
+  return this.http.get('http://35.163.158.122:8080/admins/getapps',{headers:headers}).map(res=>res.json());
 
 }
 
@@ -45,7 +45,7 @@ acceptOrDecline(businessName,approval){
   this.loadToken();
   headers.append('Authorization',this.AuthToken);
   headers.append('Content-Type','application/json');
-  return this.http.get('http://localhost:8080/admins/approve/'+businessName+'/'+approval,{headers:headers}).map(res=>res.json());
+  return this.http.get('http://35.163.158.122:8080/admins/approve/'+businessName+'/'+approval,{headers:headers}).map(res=>res.json());
 }
 
 removeProvider(id){
@@ -53,7 +53,7 @@ removeProvider(id){
       this.loadToken();
       headers.append('Content-Type','application/json');
       headers.append('Authorization',this.AuthToken);
-    return this.http.get('http://localhost:8080/admins/removebprovider/'+id,{headers:headers})
+    return this.http.get('http://35.163.158.122:8080/admins/removebprovider/'+id,{headers:headers})
     .map(res => res.json());
 
   }
@@ -62,7 +62,7 @@ removeProvider(id){
       this.loadToken();
       headers.append('Content-Type','application/json');
       headers.append('Authorization',this.AuthToken);
- return this.http.get('http://localhost:8080/admins/showbp',{headers:headers})
+ return this.http.get('http://35.163.158.122:8080/admins/showbp',{headers:headers})
     .map(res => res.json());
 
 

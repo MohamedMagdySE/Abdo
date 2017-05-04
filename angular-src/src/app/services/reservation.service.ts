@@ -15,7 +15,7 @@ export class ReservationService {
     var serviceId = localStorage.getItem('serviceId');
     headers.append('Content-type','application/json');
     headers.append('Authorization',this.authToken);
-    return this.http.post('http://localhost:8080/clients/eventValidation/'+bId+'/'+serviceId,event,{headers:headers})
+    return this.http.post('http://35.163.158.122:8080/clients/eventValidation/'+bId+'/'+serviceId,event,{headers:headers})
     .map(res => res.json());
   }
 
@@ -26,7 +26,7 @@ export class ReservationService {
     var serviceId = localStorage.getItem('serviceId');
     headers.append('Content-type','application/json');
     headers.append('Authorization',this.authToken);
-    return this.http.post('http://localhost:8080/clients/addEvent/'+bId+'/'+serviceId,event,{headers:headers})
+    return this.http.post('http://35.163.158.122:8080/clients/addEvent/'+bId+'/'+serviceId,event,{headers:headers})
     .map(res => res.json());
   }
 
@@ -40,7 +40,7 @@ export class ReservationService {
     var serviceId = localStorage.getItem('serviceId');
     headers.append('Content-type','application/json');
     headers.append('Authorization',this.authToken);
-    return this.http.get('http://localhost:8080/clients/getEvents/'+bId+'/'+serviceId,{headers:headers})
+    return this.http.get('http://35.163.158.122:8080/clients/getEvents/'+bId+'/'+serviceId,{headers:headers})
     .map(res => res.json());
   }
 

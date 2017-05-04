@@ -29,7 +29,7 @@ const user = {
 headers.append('Content-Type','application/json');
 headers.append('Authorization',this.authToken);
 
-return this.http.post('http://localhost:8080/clients/EditProfile',user,{headers:headers})
+return this.http.post('http://35.163.158.122:8080/clients/EditProfile',user,{headers:headers})
 .map(res=>res.json());
 
 
@@ -42,7 +42,7 @@ let headers = new Headers();
      headers.append('Content-Type','application/json');
        headers.append('Authorization', this.authToken);
 
-   const u= this.http.get('http://localhost:8080/clients/Profile',{headers: headers})
+   const u= this.http.get('http://35.163.158.122:8080/clients/Profile',{headers: headers})
       .map(res => res.json());
 console.log(u);
 return u;

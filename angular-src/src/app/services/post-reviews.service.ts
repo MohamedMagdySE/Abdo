@@ -15,7 +15,7 @@ authToken:any
     this.loadToken();
     headers.append('Authorization',this.authToken);
  headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:8080/clients/PostReview/'+id,review, {headers:headers}).map(res=>res.json());
+    return this.http.post('http://35.163.158.122:8080/clients/PostReview/'+id,review, {headers:headers}).map(res=>res.json());
   }
 
 

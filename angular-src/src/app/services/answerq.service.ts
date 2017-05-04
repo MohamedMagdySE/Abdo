@@ -14,7 +14,7 @@ authToken:any;
     headers.append('Content-Type','application/json');
     headers.append('Authorization',this.authToken);
     console.log(answer);
-    return this.http.post('http://localhost:8080/bproviders/answerQuestion/'+id,answer,{headers:headers})
+    return this.http.post('http://35.163.158.122:8080/bproviders/answerQuestion/'+id,answer,{headers:headers})
     .map(res => res.json());
 
 }

@@ -24,7 +24,7 @@ username:username,
 headers.append('Content-Type','application/json');
 headers.append('Authorization',this.authToken);
 
-return this.http.post('http://localhost:8080/clients/editPassword',user,{headers:headers})
+return this.http.post('http://35.163.158.122:8080/clients/editPassword',user,{headers:headers})
 .map(res=>res.json());
 
 

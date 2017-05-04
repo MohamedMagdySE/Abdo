@@ -31,7 +31,7 @@ AddService(user){
    this.loadToken();
    headers.append('Content-type','application/json');
    headers.append('Authorization',this.authToken);
-   return this.http.post('http://localhost:8080/bproviders/AddService',user,{headers:headers}).map(res => res.json());
+   return this.http.post('http://35.163.158.122:8080/bproviders/AddService',user,{headers:headers}).map(res => res.json());
  }
 
  loadToken(){

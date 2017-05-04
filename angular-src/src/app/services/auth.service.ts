@@ -12,7 +12,7 @@ authToken:any;
   authenticateUser(user){
     let headers = new Headers();
     headers.append('Content-type','application/json');
-    return this.http.post('http://localhost:8080/login',user,{headers:headers})
+    return this.http.post('http://35.163.158.122:8080/login',user,{headers:headers})
     .map(res => res.json());
   }
 
@@ -34,7 +34,7 @@ this.loadToken();
 headers.append('Authorization', this.authToken);
 headers.append('Content-type','application/json');
 console.log(this.authToken);
-return this.http.get('http://localhost:8080/clients/Profile',{headers:headers})
+return this.http.get('http://35.163.158.122:8080/clients/Profile',{headers:headers})
 .map(res => res.json());
 
 }
@@ -84,13 +84,13 @@ this.authToken = token;
   registerClient(client){
     let headers = new Headers();
     headers.append('Content-type','application/json');
-    return this.http.post('http://localhost:8080/register/0',client,{headers:headers})
+    return this.http.post('http://35.163.158.122:8080/register/0',client,{headers:headers})
     .map(res => res.json());
   }
   registerbProvider(bprovider){
     let headers = new Headers();
     headers.append('Content-type','application/json');
-    return this.http.post('http://localhost:8080/register/1',bprovider,{headers:headers})
+    return this.http.post('http://35.163.158.122:8080/register/1',bprovider,{headers:headers})
     .map(res => res.json());
   }
 

@@ -9,13 +9,13 @@ export class GetReviewsService {
 
   GetReviews(id) {
 
-  return this.http.get('http://localhost:8080/clients/ViewReviews/'+id).map(res => res.json());
+  return this.http.get('http://35.163.158.122:8080/clients/ViewReviews/'+id).map(res => res.json());
   }
 
 
 GetAnnoucements(id)
 {
-  return this.http.get('http://localhost:8080/clients/ViewAnnoucements/'+id).map(res => res.json());
+  return this.http.get('http://35.163.158.122:8080/clients/ViewAnnoucements/'+id).map(res => res.json());
 }
 
 }

@@ -28,7 +28,7 @@ const user = {
   headers.append('Content-Type','application/json');
    headers.append('Authorization', this.authToken);
 
-   return this.http.post('http://localhost:8080/bproviders/editBprofile',user,{headers: headers})
+   return this.http.post('http://35.163.158.122:8080/bproviders/editBprofile',user,{headers: headers})
       .map(res => res.json());
 
 }
@@ -45,7 +45,7 @@ let headers = new Headers();
      headers.append('Content-Type','application/json');
        headers.append('Authorization', this.authToken);
 
-   const u= this.http.get('http://localhost:8080/bproviders/MyProfile',{headers: headers})
+   const u= this.http.get('http://35.163.158.122:8080/bproviders/MyProfile',{headers: headers})
       .map(res => res.json());
 console.log(u);
 return u;
@@ -64,7 +64,7 @@ console.log(this.authToken);
      headers.append('Content-Type','application/json');
        headers.append('Authorization', this.authToken);
 
-return this.http.get('http://localhost:8080/bproviders/checkBP',{headers: headers})
+return this.http.get('http://35.163.158.122:8080/bproviders/checkBP',{headers: headers})
       .map(res => res.json());
 
 }
@@ -87,7 +87,7 @@ this.loadToken();
 
 
 
-return this.http.post('http://localhost:8080/bproviders/editBprofilePicture',formData,{headers:headers})
+return this.http.post('http://35.163.158.122:8080/bproviders/editBprofilePicture',formData,{headers:headers})
 .map(res => res.json());
 
 }*/
@@ -103,7 +103,7 @@ this.loadToken();
         headers.append('Authorization', this.authToken);
 
         let options = new RequestOptions({ headers: headers });
-         return this.http.post('http://localhost:8080/bproviders/editBprofilePicture', formData, options)
+         return this.http.post('http://35.163.158.122:8080/bproviders/editBprofilePicture', formData, options)
             .map(res => res.json());
 
 }
@@ -138,7 +138,7 @@ headers.append('Authorization', this.authToken);
 
 
 
-        xhr.open('POST','http://localhost:8080/bproviders/editBprofilePicture', true);
+        xhr.open('POST','http://35.163.158.122:8080/bproviders/editBprofilePicture', true);
         xhr.setRequestHeader("Authorization", this.authToken);
         xhr.send(formData);
 

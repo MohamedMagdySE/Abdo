@@ -19,7 +19,7 @@ export class ViewquestionsService {
     this.loadToken();
     headers.append('Content-Type','application/json');
     headers.append('Authorization',this.authToken);
-    return this.http.get('http://localhost:8080/bproviders/myQuestions' + '?businessid=' + bid, {headers:headers}).map(res=>res.json());
+    return this.http.get('http://35.163.158.122:8080/bproviders/myQuestions' + '?businessid=' + bid, {headers:headers}).map(res=>res.json());
   }
 
 }
