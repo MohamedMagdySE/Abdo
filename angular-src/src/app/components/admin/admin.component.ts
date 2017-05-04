@@ -58,7 +58,7 @@ export class AdminComponent implements OnInit {
   	this.bool = bool;
   	this.adminsservice.banorUnban(this.id,this.bool).subscribe(result =>{
     if(result.success){
-      location.reload();
+      window.location.reload();
       this.flashmessage.show(result.msg,{cssClass:'alert-success',timeout:3000});
 
     }
@@ -71,14 +71,14 @@ export class AdminComponent implements OnInit {
 
   acceptOrDecline(event,approval){
     this.adminsservice.acceptOrDecline(event.target.value,approval).subscribe(application =>{
-      location.reload();
+      window.location.reload();
 
     });
   }
 
   onRemoveProvider(event){
          this.adminsservice.removeProvider(event.target.value).subscribe(data=>{});
-         location.reload();
+         window.location.reload();
 }
 
 
