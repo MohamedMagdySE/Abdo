@@ -13,17 +13,17 @@ export class ViewService {
 
   getAllBusiness(){
 
-	return this.http.get('http://localhost:8080/All').map(res => res.json());
+	return this.http.get('http://35.163.158.122:8080/All').map(res => res.json());
 }
 
 getTopBusiness(){
 
-	return this.http.get('http://localhost:8080/top').map(res => res.json());
+	return this.http.get('http://35.163.158.122:8080/top').map(res => res.json());
 }
 
 searchBusinessUpdated(search:string){
 
-	return this.http.get('http://localhost:8080/bproviders/searchB'+'?q='+search).map(res => res.json());
+	return this.http.get('http://35.163.158.122:8080/bproviders/searchB'+'?q='+search).map(res => res.json());
 }
 
 }
