@@ -21,7 +21,7 @@ export class AskquestionService {
       question: question
     }
     headers.append('Authorization',this.AuthToken);
-    return this.http.post('http://localhost:8080/clients/Questions' + '?businessid=' + bid, body, {headers:headers}).map(res=>res.json());
+    return this.http.post('http://35.163.158.122:8080/clients/Questions' + '?businessid=' + bid, body, {headers:headers}).map(res=>res.json());
   }
 
 }
