@@ -71,7 +71,10 @@ export class AdminComponent implements OnInit {
 
   acceptOrDecline(event,approval){
     this.adminsservice.acceptOrDecline(event.target.value,approval).subscribe(application =>{
-      window.location.reload();
+      //window.location.reload();
+	    refresh(){
+  this.router.navigate(["Admin?refresh=1"]);
+}
 
     });
   }
